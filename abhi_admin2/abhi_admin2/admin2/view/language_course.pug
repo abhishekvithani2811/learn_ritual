@@ -1,0 +1,326 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title
+  // plugins:css
+  link(rel='stylesheet' href='/css/vendors/feather/feather.css')
+  link(rel='stylesheet' href='/css/vendors/ti-icons/css/themify-icons.css')
+  link(rel='stylesheet' href='/css/vendors/css/vendor.bundle.base.css')
+  link(rel='stylesheet' href='/css/vertical-layout-light/style.css')
+.container-scroller
+  // partial:../../partials/_navbar.html
+  nav.navbar.col-lg-12.col-12.p-0.fixed-top.d-flex.flex-row
+    .text-center.navbar-brand-wrapper.d-flex.align-items-center.justify-content-start
+      a.navbar-brand.brand-logo.me-5(href='/css/index.html')
+        img.me-2(src='/css/www.bootstrapdash.com/demo/skydash/template/images/default.png' alt='logo')
+      
+    .navbar-menu-wrapper.d-flex.align-items-center.justify-content-end
+      button.navbar-toggler.navbar-toggler.align-self-center(type='button' data-toggle='minimize')
+        span.icon-menu
+      ul.navbar-nav.mr-lg-2
+        li.nav-item.nav-search.d-none.d-lg-block
+          .input-group
+            #navbar-search-icon.input-group-prepend.hover-cursor
+              span#search.input-group-text
+                i.icon-search
+            input#navbar-search-input.form-control(type='text' placeholder='Search now' aria-label='search' aria-describedby='search')
+      ul.navbar-nav.navbar-nav-right
+        li.nav-item.dropdown
+          a#notificationDropdown.nav-link.count-indicator.dropdown-toggle(href='#' data-bs-toggle='dropdown')
+            i.icon-bell.mx-0
+            span.count
+          .dropdown-menu.dropdown-menu-right.navbar-dropdown.preview-list(aria-labelledby='notificationDropdown')
+            p.mb-0.font-weight-normal.float-left.dropdown-header Notifications
+            a.dropdown-item.preview-item
+              .preview-thumbnail
+                .preview-icon.bg-success
+                  i.ti-info-alt.mx-0
+              .preview-item-content
+                h6.preview-subject.font-weight-normal Application Error
+                p.font-weight-light.small-text.mb-0.text-muted
+                  | Just now
+            a.dropdown-item.preview-item
+              .preview-thumbnail
+                .preview-icon.bg-warning
+                  i.ti-settings.mx-0
+              .preview-item-content
+                h6.preview-subject.font-weight-normal Settings
+                p.font-weight-light.small-text.mb-0.text-muted
+                  | Private message
+            a.dropdown-item.preview-item
+              .preview-thumbnail
+                .preview-icon.bg-info
+                  i.ti-user.mx-0
+              .preview-item-content
+                h6.preview-subject.font-weight-normal New user registration
+                p.font-weight-light.small-text.mb-0.text-muted
+                  | 2 days ago
+        li.nav-item.nav-profile.dropdown
+          a#profileDropdown.nav-link.dropdown-toggle(href='#' data-bs-toggle='dropdown')
+            img(src='/css/images/faces/face28.jpg' alt='profile')
+          .dropdown-menu.dropdown-menu-right.navbar-dropdown(aria-labelledby='profileDropdown')
+            a.dropdown-item
+              i.ti-settings.text-primary
+              |                 Settings
+            a.dropdown-item
+              i.ti-power-off.text-primary
+              |                 Logout
+        li.nav-item.nav-settings.d-none.d-lg-flex
+          a.nav-link(href='#')
+            i.icon-ellipsis
+      button.navbar-toggler.navbar-toggler-right.d-lg-none.align-self-center(type='button' data-toggle='offcanvas')
+        span.icon-menu
+  // partial
+  .container-fluid.page-body-wrapper
+    // partial:../../partials/_settings-panel.html
+    .theme-setting-wrapper
+      #settings-trigger
+        i.ti-settings
+      #theme-settings.settings-panel
+        i.settings-close.ti-close
+        p.settings-heading SIDEBAR SKINS
+        #sidebar-light-theme.sidebar-bg-options
+          .img-ss.rounded-circle.bg-light.border.me-3
+          | Light
+        #sidebar-dark-theme.sidebar-bg-options.selected
+          .img-ss.rounded-circle.bg-dark.border.me-3
+          | Dark
+        p.settings-heading.mt-2 HEADER SKINS
+        .color-tiles.mx-0.px-4
+          .tiles.success
+          .tiles.warning
+          .tiles.danger
+          .tiles.light
+          .tiles.info
+          .tiles.dark
+          .tiles.default
+    #right-sidebar.settings-panel
+      i.settings-close.ti-close
+      ul#setting-panel.nav.nav-tabs.border-top(role='tablist')
+        li.nav-item
+          a#todo-tab.nav-link.active(data-bs-toggle='tab' href='#todo-section' role='tab' aria-controls='todo-section' aria-expanded='true') TO DO LIST
+        li.nav-item
+          a#chats-tab.nav-link(data-bs-toggle='tab' href='#chats-section' role='tab' aria-controls='chats-section') CHATS
+      #setting-content.tab-content
+        #todo-section.tab-pane.fade.show.active.scroll-wrapper(role='tabpanel' aria-labelledby='todo-section')
+          .add-items.d-flex.px-3.mb-0
+            form.form.w-100
+              .form-group.d-flex
+                input.form-control.todo-list-input(type='text' placeholder='Add To-do')
+                button#add-task.add.btn.btn-primary.todo-list-add-btn(type='submit') Add
+          .list-wrapper.px-3
+            ul.d-flex.flex-column-reverse.todo-list
+              li
+                .form-check
+                  label.form-check-label
+                    input.checkbox(type='checkbox')
+                    |                       Team review meeting at 3.00 PM
+                i.remove.ti-close
+              li
+                .form-check
+                  label.form-check-label
+                    input.checkbox(type='checkbox')
+                    |                       Prepare for presentation
+                i.remove.ti-close
+              li
+                .form-check
+                  label.form-check-label
+                    input.checkbox(type='checkbox')
+                    |                       Resolve all the low priority tickets due today
+                i.remove.ti-close
+              li.completed
+                .form-check
+                  label.form-check-label
+                    input.checkbox(type='checkbox' checked='')
+                    |                       Schedule meeting for next week
+                i.remove.ti-close
+              li.completed
+                .form-check
+                  label.form-check-label
+                    input.checkbox(type='checkbox' checked='')
+                    |                       Project review
+                i.remove.ti-close
+          h4.px-3.text-muted.mt-5.font-weight-light.mb-0 Events
+          .events.pt-4.px-3
+            .wrapper.d-flex.mb-2
+              i.ti-control-record.text-primary.me-2
+              span Feb 11 2018
+            p.mb-0.font-weight-thin.text-gray Creating component page build a js
+            p.text-gray.mb-0 build a js based app
+          .events.pt-4.px-3
+            .wrapper.d-flex.mb-2
+              i.ti-control-record.text-primary.me-2
+              span Feb 7 2018
+            p.mb-0.font-weight-thin.text-gray Meeting with Alisa
+            p.text-gray.mb-0 Call Sarah Graves
+        // To do section tab ends
+        #chats-section.tab-pane.fade(role='tabpanel' aria-labelledby='chats-section')
+          .d-flex.align-items-center.justify-content-between.border-bottom
+            p.settings-heading.border-top-0.mb-3.ps-3.pt-0.border-bottom-0.pb-0 Friends
+            small.settings-heading.border-top-0.mb-3.pt-0.border-bottom-0.pb-0.pr-3.font-weight-normal
+              | See
+              | All
+          ul.chat-list
+            li.list.active
+              .profile
+                img(src='/css/images/faces/face1.jpg' alt='image')
+                span.online
+              .info
+                p Thomas Douglas
+                p Available
+              small.text-muted.my-auto 19 min
+            li.list
+              .profile
+                img(src='/css/images/faces/face2.jpg' alt='image')
+                span.offline
+              .info
+                .wrapper.d-flex
+                  p Catherine
+                p Away
+              .badge.badge-success.badge-pill.my-auto.mx-2 4
+              small.text-muted.my-auto 23 min
+            li.list
+              .profile
+                img(src='/css/images/faces/face3.jpg' alt='image')
+                span.online
+              .info
+                p Daniel Russell
+                p Available
+              small.text-muted.my-auto 14 min
+            li.list
+              .profile
+                img(src='/css/images/faces/face4.jpg' alt='image')
+                span.offline
+              .info
+                p James Richardson
+                p Away
+              small.text-muted.my-auto 2 min
+            li.list
+              .profile
+                img(src='/css/images/faces/face5.jpg' alt='image')
+                span.online
+              .info
+                p Madeline Kennedy
+                p Available
+              small.text-muted.my-auto 5 min
+            li.list
+              .profile
+                img(src='/css/images/faces/face6.jpg' alt='image')
+                span.online
+              .info
+                p Sarah Graves
+                p Available
+              small.text-muted.my-auto 47 min
+        // chat tab ends
+    // partial
+    // partial:../../partials/_sidebar.html
+   nav#sidebar.sidebar.sidebar-offcanvas
+      ul.nav
+        li.nav-item
+          a.nav-link(href='/index.html')
+            i.icon-grid.menu-icon
+            span.menu-title Dashboard
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='/cor/' aria-expanded='false' aria-controls='auth')
+            i.icon-grid.menu-icon
+            spa.menu-title Course
+          #auth.collapse
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='/admission/' aria-expanded='false' aria-controls='auth')
+            i.icon-grid.menu-icon
+            spa.menu-title Admission
+          #auth.collapse
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='/language/' aria-expanded='false' aria-controls='auth')
+            i.icon-grid.menu-icon
+            spa.menu-title Language
+          #auth.collapse
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='/lecture/' aria-expanded='false' aria-controls='auth')
+            i.icon-grid.menu-icon
+            spa.menu-title Lecture
+          #auth.collapse
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='register_user' aria-expanded='false' aria-controls='auth')
+            i.icon-grid.menu-icon
+            spa.menu-title Register User
+          #auth.collapse
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='/religion/' aria-expanded='false' aria-controls='auth')
+            i.icon-grid.menu-icon
+            spa.menu-title Religion
+          #auth.collapse
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='/teacher/' aria-expanded='false' aria-controls='auth')
+            i.icon-grid.menu-icon
+            spa.menu-title Teacher
+          #auth.collapse
+        
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='#auth' aria-expanded='false' aria-controls='auth')
+            i.icon-grid.menu-icon
+            spa.menu-title User Pages
+          #auth.collapse
+            i.icon-grid.menu-icon
+            ul.nav.flex-column.sub-menu
+              li.nav-item
+                a.nav-link(href='login.html')  Login 
+              li.nav-item
+                a.nav-link(href='login-2.html') Forget Password
+        li.nav-item
+          a.nav-link(data-bs-toggle='collapse' href='#error' aria-expanded='false' aria-controls='error')
+            i.icon-grid.menu-icon
+            span.menu-title Error pages
+          #error.collapse
+            ul.nav.flex-column.sub-menu
+              li.nav-item
+                a.nav-link(href='error-404.html')  404         
+    // partial
+    .main-panel
+      .content-wrapper
+        .card
+          .card-body
+            h4.card-title LANGUAGE COURSE TABLE
+            .row
+              .col-12
+                .table-responsive
+                  table#order-listing.table
+                    thead
+                      tr
+                        th id
+                        th courseid
+                        th Languageid
+                      each row in language_course1
+                        tr 
+                          each value,key in row 
+                            td #{value}
+      // content-wrapper ends
+      // partial:../../partials/_footer.html
+      footer.footer
+        .d-sm-flex.justify-content-center.justify-content-sm-between
+          span.text-muted.text-center.text-sm-left.d-block.d-sm-inline-block
+            | Copyright &copy; 2023. 
+            a(href='https://wordpress-923989-3206731.cloudwaysapps.com/' target='_blank') Learn Ritual .
+          span.float-none.float-sm-right.d-block.mt-1.mt-sm-0.text-center
+            
+      // partial
+    // main-panel ends
+  // page-body-wrapper ends
+// container-scroller
+// plugins:js
+script(src='/css/vendors/js/vendor.bundle.base.js')
+// endinject
+// Plugin js for this page
+// End plugin js for this page
+// inject:js
+script(src='/js/off-canvas.js')
+script(src='/js/hoverable-collapse.js')
+script(src='/js/template.js')
+script(src='/js/settings.js')
+script(src='/js/todolist.js')
+// endinject
+// Custom js for this page
+// End custom js for this page
+// Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/samples/blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Feb 2023 06:03:01 GMT

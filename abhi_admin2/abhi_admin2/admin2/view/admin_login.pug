@@ -1,0 +1,69 @@
+doctype html
+html(lang='en')
+  // Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/samples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Feb 2023 06:03:01 GMT
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title Skydash Admin
+    // plugins:css
+    link(rel='stylesheet', href='/css/vertical-layout-light/style.css')
+    // endinject
+    // Plugin css for this page
+    // End plugin css for this page
+    // inject:css
+    link(rel='stylesheet', href='/css/vertical-layout-light/style.css')
+    // endinject
+    link(rel='shortcut icon', href='/images/favicon.png')
+  body.sidebar-dark
+    .container-scroller
+      .container-fluid.page-body-wrapper.full-page-wrapper
+        .content-wrapper.d-flex.align-items-center.auth.px-0
+          .row.w-100.mx-0
+            .col-lg-4.mx-auto
+              .auth-form-light.text-left.py-5.px-4.px-sm-5
+                .brand-logo
+                  img(src='/images/default.png', alt='logo')
+                h4 Hello! let&apos;s get started
+                h6.font-weight-light Sign in to continue.
+                form.pt-3(action="/admin_login",method="POST")
+                  .form-group
+                    input#exampleInputEmail1.form-control.form-control-lg(type='email', placeholder='Username',name="email")
+                  .form-group
+                    input#exampleInputPassword1.form-control.form-control-lg(type='password', placeholder='Password',name="password")
+                  .mt-3
+                    button.btn.btn-block.btn-primary.btn-lg.font-weight-medium.auth-form-btn.ml-4(type='submit') SIGN IN
+                  .my-2.d-flex.justify-content-between.align-items-center
+                    //
+                      <div class="form-check">
+                      <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input">
+                      Keep me signed in
+                      </label>
+                      </div>
+                    a.auth-link.text-black.mt-3(href='../admin1/forget_password.html\
+                    ') Forgot password?
+                  .mb-2
+                    //
+                      <button type="button" class="btn btn-block btn-facebook auth-form-btn">
+                      <i class="ti-facebook me-2"></i>Connect using facebook
+                      </button>
+                  .text-center.mt-4.font-weight-light
+                    | Don&apos;t have an account? 
+                    button.text-primary(type='submit') Create
+        // content-wrapper ends
+      // page-body-wrapper ends
+    // container-scroller
+    // plugins:js
+    script(src='../admin1/vendors/js/vendor.bundle.base.js')
+    // endinject
+    // Plugin js for this page
+    // End plugin js for this page
+    // inject:js
+    script(src='/js/off-canvas.js')
+    script(src='/js/hoverable-collapse.js')
+    script(src='/js/template.js')
+    script(src='/js/settings.js')
+    script(src='/js/todolist.js')
+    // endinject
+  // Mirrored from www.bootstrapdash.com/demo/skydash/template/demo/vertical-dark-sidebar/pages/samples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Feb 2023 06:03:01 GMT

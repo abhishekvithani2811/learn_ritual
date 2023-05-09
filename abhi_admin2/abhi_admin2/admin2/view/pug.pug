@@ -1,0 +1,19 @@
+doctype html 
+html
+    head 
+        title All products 
+    body 
+        h1 All Product <hr width='70%' />
+        table(border='2',cellpadding='10',align='center',width='70%') 
+            tr 
+                th Sr No 
+                th Name 
+                th Price 
+                th Quantity 
+            - var count=1
+            each row in all_products
+                tr 
+                    td=count++
+                    each value,key in row 
+                        if(key!='id')
+                            td #{value}

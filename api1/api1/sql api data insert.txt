@@ -1,0 +1,17 @@
+1. Course
+religionid=1&title=abc1&detail=xyz&duration=123&noofhours=1&price=120&iscertified=01&status=0
+
+2.Religion
+&detail=xyz&status=0&name=abc
+
+3.Language
+detail=xyz&name=abc
+
+4.Language_course
+courseid=01&languageid=02
+
+5.admission
+register_userid=1&teacherid=1&language_courseid=1&courseid=1&joiningdate=1&isdemo=1&transactioncode=123&ispaid=1&iscompleted=1&coutry=1&review=1&reviewnotes=1
+
+6.teacher
+username=1&password=123&name=abhi&photo=123&qualification=123&mobileno=123123&emailaddressabhi12@gmail.com&dob12-feb-2022&gender=1&coutry=india&timezone=123&bankaccountno=123123&bankname=bhavmgar&ifsccode=123&status=1

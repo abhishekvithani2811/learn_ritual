@@ -1,0 +1,3 @@
+select  a.title,a.detail,a.duration,a.noofhours,a.price
+from course a,religion b
+where a.id=b.id AND religionid = '${religionid}' `;
